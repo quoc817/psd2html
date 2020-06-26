@@ -1,14 +1,14 @@
 @font-face {
   font-family: ExistenceL;
-  src: url("/fonts/existence-cufonfonts/Existence-Light.woff") format("woff");
+  src: url("./fonts/existence-cufonfonts/Existence-Light.woff") format("woff");
 }
 @font-face {
   font-family: HelveticaNeu;
-  src: url("/fonts/Helvetical/HelveticaNeueLTStd45Light_22520.ttf") format("ttf");
+  src: url("./fonts/Helvetical/HelveticaNeueLTStd45Light_22520.ttf") format("ttf");
 }
 @font-face {
   font-family: LatoHairline;
-  src: url("/fonts/lato-hairline-cufonfonts/Lato-Hairline.woff") format("woff");
+  src: url("./fonts/lato-hairline-cufonfonts/Lato-Hairline.woff") format("woff");
 }
 :root {
   font-size: 62.5%;

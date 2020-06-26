@@ -1,0 +1,662 @@
+// font  
+@font-face { 
+    font-family: ExistenceL ;
+    src: url('/fonts/existence-cufonfonts/Existence-Light.woff') format('woff');
+}
+@font-face { 
+    font-family: HelveticaNeu ;
+    src: url('/fonts/Helvetical/HelveticaNeueLTStd45Light_22520.ttf') format('ttf');
+}
+@font-face {
+    font-family: LatoHairline;
+    src: url('/fonts/lato-hairline-cufonfonts/Lato-Hairline.woff') format('woff');
+}
+
+//  Default
+:root {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+*,
+*::after,
+*::before {
+   box-sizing: border-box; 
+}
+a {
+    text-decoration: none;
+}
+
+
+// variables
+$primary-color: #9f449b;
+$text-color: #676767;
+
+// mixin
+@import 'scss/mixins';
+
+// helper 
+@import 'scss/helpers';
+.wrapper{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.container {
+    max-width: 117rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+.bg-gray {
+    background-color: #eeeeee;
+}
+.bg-decor {
+    background-image: url('../image/Bhaga/sectionbg.jpg');
+}
+// ==========================================header=========================================
+.header {
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        &::after {
+            content: '';
+            position: absolute;
+            @include size(100%);
+            top: 0;
+            left: 0;
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            z-index: 2;
+        }
+    }
+    
+    .container {
+        position: relative;
+        z-index: 2;
+        padding-top: 11rem;
+    }
+}
+.jumbotron {
+    color: white;
+    text-align: center;
+    &__title{
+        margin-bottom: 7.5rem;
+        font-family: ExistenceL;
+        @include font(5rem);
+        
+    }
+    &__title--h {
+        color: $primary-color;
+    }
+    &__subtitle  {
+        margin-bottom: 3rem;
+        font-family: LatoHairline ;
+        @include font(4.8rem);
+    }
+    &__text {
+        margin-bottom: 12rem;
+        font-family: LatoHairline ;
+        @include font(2.4rem);
+    }
+}
+
+.menu {
+    height: 39.5rem;
+    @include flex(flex-end , space-between);
+    &__item {
+        &:nth-child(3),&:nth-child(4) {
+            align-self: flex-start;
+        }
+    }
+
+}
+.b-icon {
+    @include flex(center, center);
+    @include size(17rem, 18.5rem);
+    background-image: url("../image/Bhaga/all-icon.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin: 0 auto;
+    &__item {
+        display: block;
+        @include size(5.8rem);
+        background-image: url("../image/Bhaga/all-icon.png");
+      
+    }
+    &__item--big {
+        @include size(8.5rem, 6.8rem);
+    }
+    &__item--setting {
+        background-position: -198px 0;
+    }
+    &__item--user {
+        background-position: -288px 0;
+    }
+    &__item--buble {
+        background-position: -380px 0;
+    }
+    &__item--photo {
+        background-position: -471px 0;
+    }
+    &__item--pen {
+        background-position: -562px 0;
+    }
+    &__item--paperplane {
+        background-position: -653px 0;
+    }
+    &__item--heart {
+        background-position: -182px -81px;
+    }
+    &__item--diamond {
+        background-position: -318px -83px;
+    }
+    &__item--cup {
+        background-position: -438px -81px;
+    }
+    &__item--phone {
+        background-position: -571px -81px;
+    }
+    &__item--study {
+        background-position: -184px -256px;
+    }
+    &--hasbg {
+        &:hover{
+            background-position: 0 -192px;
+        }
+    }
+    &--small {
+        @include size(9rem, 9.5rem); 
+        background-image: url("../image/Bhaga/outline.png");
+        background-size: cover;
+        margin: 0 auto 8.2rem;
+        i {
+            font-size: 3.2rem;
+            color: white;
+        }
+        &:hover i {
+            color: $primary-color;
+        }
+    }
+
+}
+.navigation { 
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    
+    .container {
+        @include flex(center, space-between);
+        padding-top: 5.5rem;
+        margin-bottom: 3rem;
+    }
+    .jumbotron {
+        &__title {
+            margin-bottom: 0;
+        }
+    }
+    &__menulist {
+        width: 66.7rem;
+        ul {
+            @include flex(center, space-between);
+        }
+    }
+    &__link {
+
+        @include font (1.8rem, 300);
+        &:hover {
+            color : $primary-color;
+        }
+    }
+}
+.feature {
+    padding-top: 18rem ;
+    padding-bottom: 21rem;
+    .b-icon {  
+        &:hover {
+            background-image: url("../image/Bhaga/all-icon.png");
+            background-position: 0 -382px;
+            .b-icon__item--heart {
+                background-position: -182px -163px;
+            }
+            .b-icon__item--diamond {
+                background-position: -318px -163px;
+            }
+            .b-icon__item--cup {
+                background-position: -438px -161px;
+            }
+            .b-icon__item--phone {
+                background-position: -571px -161px;
+            }
+        }
+    }
+}
+.headblock {
+    text-align: center;
+    position: relative;
+    margin-bottom: 17.5rem;
+    &__h3 {
+        font-family: ExistenceL ;
+        font-size: 4.8rem ;
+    }
+    &__h {
+        color: $primary-color;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        @include size(2.9rem);
+        border-left: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        box-shadow: inset 0px -1px 0 0 #ecdaeb,
+                            -1px 0px 0 0 #ecdaeb;
+        left : 40rem;
+        bottom: -3rem;
+                
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        @include size(2.9rem);
+        border-right: 1px solid $primary-color;
+        border-top: 1px solid $primary-color;
+        box-shadow: inset 0px 1px 0 0 #ecdaeb,
+                        1px 0px 0 0 #ecdaeb;
+        top: -3rem;
+        right: 40rem;       
+    }
+}
+.b-feature {
+    ul {
+        @include flex (center, space-between);
+    }
+    
+    &__item {
+        width: calc(25% - 2.25rem);
+        text-align: center;
+
+    }
+    &__name {
+        @include font(2.4rem);
+        margin: 4rem 0;
+    }
+    &__name--big {
+        @include font(4.8rem);
+        margin: 6rem 0;
+        // max-width: 75rem;
+        // text-align: center;
+    }
+    &__desc { 
+        @include font(1.6rem);
+    }
+}
+.about {
+    .container {
+        padding-top: 15.5rem;
+        padding-bottom: 23rem;
+    }
+    &__content {
+        @include flex(stretch , space-between);
+    }
+    &__desc {
+        @include flex( stretch,center, column);
+        width: 45.7rem;
+        @include font(1.6rem , 300);
+        line-height: 1.5;
+    }
+    &__btn {
+        margin-top: auto ;
+    }
+}
+.btn {
+    display: block;
+    @include size (23rem, 7.5rem);
+    background-color: $primary-color;
+    @include v-align(7.5rem);
+    @include font(2rem);
+    color: white;
+    &--rounded {
+        border-radius: 3px;
+    }   
+    &--border {
+        border: 1px solid #000;
+    }
+}
+.quote {
+    .container {
+        padding: 15rem 0 11.9rem ;
+        color: white;
+    }
+    .b-feature {
+        ul {
+            justify-content: center;
+        }
+        &__item {
+            @include size(100%);
+        }
+    }
+    .b-icon {
+        &__item {
+            @include size(8.5rem, 6.8rem);
+        }
+        &:hover {
+            background-image: url('../image/Bhaga/all-icon.png');
+            background-position: 0 -382px;
+            .b-icon__item--study {
+                background-position: -307px -256px;
+            }
+        }
+    }
+}
+.ourteam {
+    .container {
+        padding-top: 15.5rem;
+        padding-bottom: 23rem;
+    }
+    &__view-control {
+        text-align: center;
+        @include font (5rem);
+        a {
+           margin: 2rem;
+        }
+    }
+    &__list {
+       margin-top: 16rem;
+    }
+}
+.members {
+    @include flex (stretch, space-around);
+    &__profie {
+        text-align: center;
+    }
+    &__avatar {
+        @include size(25.2rem);
+        border-radius: 50%;
+        object-fit: cover ;
+        border : 1px solid #676767;
+    }
+    &__name {
+        @include font(2.4rem,600);
+        margin: 8rem 0 2rem;
+    }
+    &__position {
+        @include font(1.8rem);
+        color: #838383;
+        margin-bottom: 3rem;
+    }
+}
+.social {
+    &__item {
+        display: inline-block;
+       &:not(:last-child) {
+           margin-right : 2.5rem
+       }
+    }
+    &__icon {
+        display: inline-block;
+        @include size(4.5rem) ;
+        @include v-align(4.5rem);
+        border-radius: 50%;
+        border : 1px solid #676767;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 2.4rem;
+    }
+    
+}
+.ourskill {
+    .container {
+        padding: 0 0 15rem;
+    }
+    &__list {
+        padding: 0 9.8rem;
+        ul {
+            @include flex(space-between, space-between, row, wrap);
+        }
+    }
+    &__item {
+        margin-bottom: 5rem;
+        font-family: HelveticaNeu ;
+        overflow: auto;
+    }
+    &__name {
+        display: inline-block;
+        @include font(2.3rem, 600);
+        margin-bottom: 2.2rem;
+    }
+    &__inprogress{
+        @include font(2.4rem, 300);
+        color: #676767;
+        float: right;
+    }
+    
+}
+.progress {
+    @include size(42rem, 2rem);
+    background-color: #838383;
+    &__bar {
+        background-color: $primary-color;
+        width: 70%;
+        height: 100%;
+    }
+}
+.service {
+    .container {
+        padding: 15rem 0 11.9rem ;
+        color: white;
+    }
+    .b-feature {
+        ul {
+            justify-content: center;
+        }
+        &__item {
+            @include size(100%);
+        }
+        &__name {
+            @include font(4.8rem, 300);
+            margin: 4rem 0;
+        }
+    }
+    .b-icon {
+        &__item {
+            @include size(8.5rem, 6.8rem);
+        }
+        &__item--buble {
+            background-position: -365px 5px;
+        }
+        &:hover {
+            background-image: url('../image/Bhaga/all-icon.png');
+            background-position: 0 -382px;
+            .b-icon__item--buble {
+                background-position: -365px -338px;
+            }
+        }
+    }
+    
+}
+
+.statistic {
+    .container {
+        padding: 17rem 8.2rem 8.5rem 9.8rem;
+        font-family: HelveticaNeu ;
+        color : #676767
+    }
+    &__list {
+        ul {
+            @include flex(center, space-between);
+        }
+    }
+    &__item {
+        text-align: center;
+        h3 {
+            @include font(6.4rem, 300);
+            color: #000;
+        }
+        p {
+            @include font(1.4rem, 300);
+        }
+    }
+}
+
+.testimonials {
+    .container {
+        padding: 6rem 0 10rem;
+        font-family: HelveticaNeu ;
+        text-align: center;
+    }
+    &__image {
+        @include size(17.5rem);
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 5rem;
+    }
+    &__content {
+        max-width: 94.5rem;
+        @include font(3.3rem, 300);
+        color: #5b5b5b;
+        margin: 0 auto 4rem;
+    }
+    &__origin {
+        @include font(3.3rem, 600);
+        color: #777777;
+        margin-bottom: 5.5rem;
+    }
+    &__bottom {
+        @include size(128rem, 8rem);
+        margin: 0 auto;
+        background-color: #fff;
+    }
+}
+.slider-control {
+    &__item {
+        
+        &:not(:first-child) {
+            margin-left: .8rem;
+        }
+        display: inline-block;
+        @include size(1.1rem);
+        border-radius: 50%;
+    }
+    &__item--active {
+        background-color: #777777;
+       i {
+            visibility: hidden;
+       }
+    }
+}
+.portfolio {
+    .container {
+        padding-bottom: 22rem;
+        font-family: HelveticaNeu;
+    }
+    &__filter {
+        margin-bottom: 7rem;
+        text-align: center;
+    }
+    &__btn {
+        display: inline-block;
+        @include size(8.4rem, 4rem);
+        background-color: $primary-color;
+        @include v-align(4rem);
+        @include font(1.8rem);
+        color: black;
+        background-color: #fff;
+        &:not(:first-child) {
+            margin-left: 2.2rem;
+        }
+    }
+    &__btn:hover {
+        background-color: $primary-color;
+        color: white;
+        border-color: $primary-color;
+    }
+    &__more {
+        margin: 2.3rem auto 0;
+    }
+}
+.products {
+    @include flex(stretch, space-between, row ,wrap);
+    &__item {
+        width:  calc(33.33% - 1.5rem);
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+    &__image {
+        @include size(36rem);
+        object-fit: cover;
+    }
+    &__name {
+        @include font(2.4rem, 300);
+        margin: 2.5rem 0 1.5rem;
+    }
+    &__tags {
+        @include font(1.8rem, 300);
+        color: #838383;
+    }
+}
+
+.contact {
+    .container {
+        font-family: HelveticaNeu;
+    }
+    &__content {
+        @include flex(stretch, space-between);
+    }
+    &__form {
+        @include font(2.3rem, 300);
+        width: calc(50% - 1.5rem);
+        input {
+            @include size(53rem, 7.3rem);
+            border: 1px solid #676767;
+            padding: 2.5rem 3rem;
+            outline: none;
+            &::placeholder {
+                color : #838383;
+            }
+        }
+
+        textarea {
+            max-width: 100%;
+           @include size(53rem, 28.3rem);
+            border: 1px solid #676767;
+            padding: 2.5rem 3rem;
+            outline: none;
+            &::placeholder {
+                color : #838383;
+            }
+        }
+    }
+    &__form-item {
+        &:not(:last-child) {
+            margin-bottom: 3.5rem;
+        }
+    }
+    &__info {
+        width: calc(50% - 1.5rem);
+    }
+    &__p {
+        @include font (2.4rem, 400);
+        line-height: 1.3;
+    }
+    &__addr {
+        @include font (2.8rem, 600);
+        margin: 6.5rem 0 5rem;
+    }
+    &__phone {
+        display: block;
+        @include font (2.8rem, 600);
+        color: #000;
+        &:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+    .social {
+        padding-top: 7rem;
+    }
+
+}
+.footer {
+    text-align: center;
+    padding: 17rem 11rem;
+}

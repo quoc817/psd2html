@@ -1,0 +1,361 @@
+// Default
+html { 
+    font-size: 62.5%;
+}
+body { 
+    font-family: 'Work Sans', sans-serif;
+}
+*,
+*::before,
+*::after { 
+    box-sizing: border-box;
+}
+.wrapper { 
+    max-width: 192rem;
+    // height: 497.5rem;
+    margin: 0 auto;
+    background-image: url('../image/Doob\ -\ bg.jpg');
+    background-size: contain;
+}
+.container{
+    max-width: 117rem;
+    margin: 0 auto;
+}
+a { 
+    text-decoration: none;
+}
+//sass Define 
+// /////////////////////////////////////// 
+
+// Variable
+$text-primary-color :  #464e90;
+$highlight  : #ff4359;
+$text-normal-color : #7c7caa;
+
+// Mixin 
+@mixin flex ($align : stretch , $justify: center, $wrap : nowrap, $dir: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    flex-direction: $dir;
+}
+@mixin font ($size : 1.9rem, $weight: 300) {
+    font-size: $size;
+    font-weight: $weight;
+}
+// /////////////////////////////////////////
+.btn { 
+    width: 15.5rem;
+    height: 4.5rem;
+}
+.btn-active { 
+    background-color: $highlight;
+    color: white !important;
+}
+.btn-rounded {
+    border-radius: 1.6rem;
+}
+
+.logo img{
+    width: 7.5rem;
+    height: 3.5rem;
+    @media screen and (min-width : 1500px) {
+        position: absolute;
+        top: 2.5rem;
+        left: 19rem;
+    }
+}
+// header 
+.header { 
+    &__navbar {
+        margin-top: 1rem;
+        @include flex(center, space-between);
+        &-left, &-right { 
+            ul {
+                @include flex(center,space-between);
+            }  
+        }
+        &-left { 
+            // width: calc(75% - 16.5rem);
+            width: 50%;
+        }
+        &-right { 
+            // width: calc(25% - 16.5rem);
+            width: 30%;
+        }
+    }
+    &__item { 
+        @include font(2.4rem, 600);  
+        color: $text-primary-color;
+        &--highlight { 
+            width: 20rem;
+            height: 6rem;
+            border-radius: 1rem;
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            box-shadow: 0 0.5rem 2rem 0rem #6b6b6b;
+            
+            a { 
+                display: block;
+                color: $highlight;
+                text-align: center;
+                line-height: 5rem;
+            }
+        }        
+    }
+    &__branch { 
+        padding-top: 28rem;
+        max-width: 50%;
+        @include flex(space-between,center,nowrap,column );
+        &-title { 
+            @include font(7.8rem, 700);
+            text-transform: capitalize;
+            color: $text-primary-color;
+        }
+        &-text { 
+            margin: 4rem 0;
+            @include font(2rem);
+            color : $text-normal-color;
+        }
+    }
+    &__btn {
+        display: inline-block;
+        width: 20rem;
+        height: 5.5rem;
+        margin-left: 1rem;
+        text-align: center;
+        line-height: 3;
+        @include font(1.8rem, 600 );
+        color : $text-primary-color;
+    }
+}
+.services { 
+    margin-top: 39rem;
+    @include flex(stretch, flex-start);
+    color: $text-primary-color;
+    &__title { 
+        max-width: 45%;
+        
+        h2 {
+            @include font(5rem, 600);
+            margin-bottom: 5rem;
+        }
+        a {
+            display: block;
+            text-align: center;
+            @include font(1.8rem, 600);
+            line-height: 2.5;
+        }
+    }
+    &__items { 
+        margin-left: 2rem;
+        padding: 3rem;
+        // border: 1px solid #6b6b6b;
+        box-shadow: 0 0.3rem 1rem 0rem #6b6b6b;
+        &-badge { 
+            width: 7rem;
+            height: 7rem;
+            background-repeat: no-repeat;
+            &.bag{
+                background-image: url('../image/service-icon.png') ;
+                background-position: 0% 0%;
+            }
+            &.code{
+                background-image: url('../image/service-icon.png') ;
+                background-position: 100% 0%;
+            }
+        }
+        &-title { 
+            @include font(4rem, 600);
+            margin: 4rem 0;
+        }
+        &-text {
+            @include font(1.8rem,400);
+        }
+    }
+}
+.text-highlight { 
+    color: $highlight;
+    @include font(1.8rem, 600 );
+}
+.about { 
+    margin: 30.5rem 0 0 50% ;
+    color: $text-primary-color;
+   &__title {
+        @include font(7rem, 600);
+   }
+   &__desc
+   {
+      @include font(1.8rem,400);
+      padding: 3rem 0;;
+   }
+}
+.control {
+    font-size: 3rem;
+    color: #c2b8c3;
+    margin-right: 2rem;
+    transition: tranform 2s linear;
+    &--active i{
+        transform: scale(2,1);
+        color: $text-primary-color;
+    }
+}
+.portfolio {
+    margin-top: 20rem;
+    position: relative;
+    &__title {
+        @include font(7rem, 600);
+        color: $text-primary-color;
+    }
+    &__controlbox{
+        position: absolute;
+        right: 0;
+        top: 10rem;
+    }
+    &__works {
+        margin: 8rem 0 0 0;
+        @include flex(center,space-between, wrap);
+    }
+    &__item {
+        width: calc(33.33% - 3rem);
+        margin-bottom: 4.5rem ;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__details { 
+        display: block;
+        width: 17rem;
+        height: 4.5rem;
+        margin: 0 auto;
+        @include font(1.6rem, 600);
+    }
+}
+.blog {
+    margin-top: 14rem;
+    position: relative;
+    color: $text-primary-color;
+    .text-highlight {
+        margin-bottom: 3rem;
+    }
+    &__title { 
+        margin-bottom: 7.5rem;
+    }
+    &__news { 
+        @include flex(center,space-between);
+    }
+    &__item {
+        padding: 5rem 4rem;
+        width: calc(33.33% - 1.7rem);
+        box-shadow: 0 0.3rem 1rem 0rem #6b6b6b;
+        
+        &-title {
+            @include font(3rem, 400);
+            .date {
+                @include font(1.6rem, 300);
+                color: $text-normal-color;
+            }
+        }
+        &-content{ 
+            @include font(2rem, 300);
+            margin : 4.5rem 0
+        }
+        .readmore { 
+            width: 5rem;
+            height: 3rem;
+            color: $highlight;
+            display: block;
+            font-size: 4rem;
+            float: right;
+        }
+        &--active { 
+            background-color: $highlight;
+            color: white;
+            .readmore { 
+                color: white;
+            }
+        }   
+    }
+}
+.contact { 
+    margin-top: 16rem;
+    .text-highlight { 
+        margin-bottom: 3rem;
+    }
+    &__input {
+        background-color: #f4fafe;
+        width: 57rem;
+        height: 6rem;
+        padding: 2rem;
+        outline: none;
+        border: none;
+        &::placeholder { 
+            color: $text-primary-color;
+            @include font(2rem, 400);
+        }
+        &-multi { 
+            margin-top: 3rem;
+            width: 100%;
+            height: 20rem;
+        }
+        &-single { 
+           margin-right: 2rem;
+        }
+    }
+    &__btn { 
+        display: block;
+        width: 20rem;
+        height: 5.5rem;
+        margin: 3rem auto 0 auto;
+        text-align: center;
+        line-height: 3;
+        @include font(1.8rem, 600 );
+        color : $text-primary-color;
+    }
+}
+.footer {
+    margin-top: 6rem;
+    padding: 6rem 0;
+    background-color: #314584;
+    color: white;
+    &__list { 
+        @include flex(center,space-between, nowrap, column );
+        height: 30rem;
+    }
+    &__doob {
+        @include font(2rem, 600 );
+    }
+    &__text {
+        @include font(6rem, 600 );
+        color: $highlight;
+    }
+    &__menu {
+        &-item {
+            float: left;
+            display: inline-block;
+            margin-left: 3.5rem;
+            @include font(2rem, 600 );
+            a { 
+                color: white;
+            }
+        }
+    }
+    &__copyright {
+        @include font(1.6rem, 400 );
+    }
+    &__social { 
+        a {
+            display: inline-block;
+            margin-left: 9rem;
+            &:first-child { 
+                margin-left: 0;
+            }
+            color: white;
+        }
+        i { 
+            
+            font-size: 4rem;
+        }
+    }
+}

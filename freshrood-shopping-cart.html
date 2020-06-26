@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Food</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/freshfood.css">
+</head>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<body>
+    <!-- fb SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0">
+    </script>
+
+
+    <!-- start header -->
+    <header class="header">
+        <div class="container">
+            <a href="freshfood.html" class="header__logo">
+                <img src="./image/fresh.png" alt="Fresh Food" class="header__img">
+            </a>
+            <nav class="header__navbar">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="./freshfood.html">TRANG CHỦ</a></li>
+                    <li class="header__menu-item"><a href="./freshfood-product.html">THỊT TƯƠI</a></li>
+                    <li class="header__menu-item"><a href="./freshfood-product.html">RAU SẠCH</a></li>
+                    <li class="header__menu-item"><a href="./freshfood-product.html">QUẢ NGỌT</a></li>
+                    <li class="header__menu-item"><a href="./freshfood-news.html">CẨM NANG</a></li>
+                    <li class="header__menu-item"><a href="#">LIÊN HỆ</a></li>
+                    <li class="header__menu-item"><a href="#">THANH TOÁN</a></li>
+                    <li class="header__menu-item"><a href="#"><i class="fas fa-search"></i></a></li>
+                    <li class="header__menu-item header__menu-item--shoppingcart"><a href="freshrood-shopping-cart.html"><i class="fas fa-shopping-basket"></i></a> <span class="header__cart-number">3</span></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start breadcrums -->
+    <secction class="breadcrums">
+        <div class="container">
+            <div class="breadcrums__list">
+                <a href="#"><i class="fas fa-home"></i> Trang chủ</a> &#8250; <a href="#">Thực Phẩm</a>
+            </div>
+        </div>
+    </secction>
+    <!-- end breadcrums -->
+    
+    <!-- start contetn  -->
+    <section class="shopping-cart">
+        <div class="container">
+            <table class="shopping-cart__list" >
+                <thead>
+                    <tr class="shopping-cart__head">
+                        <td>Mã sản phẩm</td>
+                        <td>Ảnh</td>
+                        <td>Tên sản phẩm</td>
+                        <td>Số lượng</td>
+                        <td>Giá</td>
+                        <td>Tổng</td>
+                        <td>Thao tác</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="shopping-cart__item">
+                        <td>Fre0001</td>
+                        <td><img src="https://images.unsplash.com/photo-1546530785-86397501ae20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="110x130px"></td>
+                        <td>Cá Hồi Bắc Âu</td>
+                        <td><span class="weight">1</span> Kg</td>
+                        <td>250.000 vnđ</td>
+                        <td>250.000 vnđ</td>
+                        <td> 
+                            <a href="#" class="btn btn-add">Thêm</a> 
+                            <a href="#" class="btn btn-delete">Xóa</a>
+                        </td>
+                    </tr>
+                    <tr  class="shopping-cart__item">
+                        <td>Fre0001</td>
+                        <td><img src="https://images.unsplash.com/photo-1546530785-86397501ae20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="110x130px"></td>
+                        <td>Cá Hồi Bắc Âu</td>
+                        <td><span class="weight">1</span> Kg</td>
+                        <td>250.000 vnđ</td>
+                        <td>250.000 vnđ</td>
+                        <td> 
+                            <a href="#" class="btn btn-add">Thêm</a> 
+                            <a href="#" class="btn btn-delete">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr  class="shopping-cart__foot">
+                        <td colspan="4">Tổng : <span class="total_amount">500.000 VNĐ</span></td>
+                        <td colspan="3">
+                            <a href="#" class="btn btn-update">Cập nhật giỏ hàng</a>
+                            <a href="#"  class="btn btn-delete-all">Xóa giỏ hàng</a>
+                            <a href="#" class="btn btn-checkout">Đặt mua & Thanh toán</a>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="shopping-cart__checkout-area">
+                <h2>Đặt hàng và Thanh toán</h2>
+                <form action="#" class="form-checkout">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                    <label for="customer-name">Họ và Tên:</label>
+                    <input type="text" name="customer-name">
+                    <label for="phone">Điện thoại: </label>
+                    <input type="text" name="phone">
+                    <label for="address">Địa chỉ:</label>
+                    <input type="text" name="address">
+                    <button class="btn btn-apply">Áp Dụng</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- end content -->
+
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__list-branch">
+                <li class="footer__item">
+                    <h3 class="footer__title">Trụ sở chính:</h3>
+                    <p class="footer__address">Số 6A8A, Thanh Xuân Bắc, Phường Thanh Xuân Bắc, Quận Thanh Xuân, Thành
+                        phố Hà Nội. </p>
+                    <p class="footer__phone">Điện thoại: 04.3311.3998</p>
+                    <p class="footer__fax">Fax: 04.3311.3996</p>
+                </li>
+                <li class="footer__item">
+                    <h3 class="footer__title">Chi Nhánh Hồ Chí Minh:</h3>
+                    <p class="footer__address">Số 6A8A, Thanh Xuân Bắc, Phường Thanh Xuân Bắc, Quận Thanh Xuân, Thành
+                        phố Hà Nội. </p>
+                    <p class="footer__phone">Điện thoại: 04.3311.3998</p>
+                    <p class="footer__fax">Fax: 04.3311.3996</p>
+                </li>
+                <li class="footer__item">
+                    <h3 class="footer__title">Chi Nhánh Đà Nẵng:</h3>
+                    <p class="footer__address">Số 6A8A, Thanh Xuân Bắc, Phường Thanh Xuân Bắc, Quận Thanh Xuân, Thành
+                        phố Hà Nội. </p>
+                    <p class="footer__phone">Điện thoại: 04.3311.3998</p>
+                    <p class="footer__fax">Fax: 04.3311.3996</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright">Copyright © 2016 - All rights reserved <script src="https://apis.google.com/js/plusone.js">
+        </script>
+
+        <g:plus action="share" annotation="bubble"></g:plus>
+    </div>
+
+    <!-- end foodter -->
+    <script src="./js/freshfood/app.js"></script>
+</body>
+
+</html>

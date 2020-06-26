@@ -1,0 +1,26 @@
+$res_576: "only screen and (max-width:575.98px)";
+$res_640: "only screen and (max-width: 640px)";
+$res_767: "only screen   and (max-width:766.98px)";
+$res_960: "only screen and (max-width:960px)";
+$res_992: "only screen   and (max-width:992.98px)";
+
+@mixin responsive_576 () {
+    @media #{$res_576}{
+        @content;
+    }
+}
+@mixin responsive_640 () {
+    @media #{$res_640} { 
+        @content;
+    }
+}
+@mixin responsive_767 () {
+    @media #{$res_767}{
+        @content;
+    }
+}
+@mixin responsive_960 () {
+    @media #{$res_960}{
+        @content;
+    }
+}

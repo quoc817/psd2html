@@ -1,0 +1,582 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 102rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-image: url("../image/THEYALOW-bg-header.jpg");
+  padding-bottom: 7rem;
+}
+.header__topnav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+}
+.header__menu {
+  width: 45.5rem;
+  height: 6rem;
+  background-color: #f5c506;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1rem 0;
+  color: #898988;
+}
+.header__menu-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.header__menu-item {
+  position: relative;
+}
+.header__menu-item span {
+  display: inline-block;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-image: url("../image/THEYALOW-Icons.png");
+  background-repeat: no-repeat;
+}
+.header__menu-item span.about {
+  background-position: -3px -103px;
+}
+.header__menu-item span.service {
+  background-position: -150px -103px;
+}
+.header__menu-item span.contact {
+  background-position: -290px -103px;
+}
+.header__menu-item a {
+  color: #898988;
+  display: inline-block;
+  vertical-align: 20%;
+}
+.header__menu-item:not(:last-child) ::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background-color: #898988;
+  right: -2rem;
+}
+.header__menu--shadow {
+  box-shadow: -5px -5px 0 0 #9d8218, -9px -9px 0 0 #807122;
+}
+.header .branch {
+  margin-top: 5rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  position: relative;
+}
+.header .branch__boxvideo {
+  overflow: hidden;
+}
+.header .branch .video-element {
+  display: block;
+  width: 55rem;
+  height: 32.7rem;
+}
+.header .branch__title {
+  font-size: 6rem;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+.header .branch__title--highlight {
+  color: #f5c506;
+  display: block;
+}
+.header .branch__control {
+  text-align: center;
+}
+.header .branch__control i {
+  display: block;
+  position: absolute;
+  width: 3.5rem;
+  height: 6rem;
+  background-color: #f5c506;
+  color: white;
+  font-size: 2rem;
+}
+.header .branch__control-left {
+  line-height: 3;
+  top: 25rem;
+  left: 0;
+}
+.header .branch__control-right {
+  line-height: 3;
+  top: 25rem;
+  right: 0;
+}
+.header .video-control {
+  position: absolute;
+  top: 29rem;
+  left: 2rem;
+}
+.header .video-control i {
+  color: white;
+}
+.header .video-control__play {
+  position: absolute;
+  top: -15rem;
+  left: 23rem;
+  width: 6.7rem;
+  height: 6.7rem;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  line-height: 6;
+  background-color: #e1d042;
+}
+.header .video-control__play i {
+  font-size: 3rem;
+}
+.header .video-control__play-pause {
+  width: 2.7rem;
+  height: 2.7rem;
+  background-color: #e1d042;
+  border: none;
+  text-align: center;
+  line-height: 2;
+}
+.header .video-control__play-pause i {
+  font-size: 1.5rem;
+}
+.header .video-control__time {
+  width: 40rem;
+  height: 1.5rem;
+  background-color: #5e510d;
+  border-radius: 0.5rem;
+  border: none;
+  color: #f5c507;
+  margin: 0 2rem;
+}
+.header .video-control__time::-webkit-progress-value {
+  background: #f5c507;
+}
+.header .video-control__time::-moz-progress-bar {
+  background: #f5c507;
+}
+.header .video-control__time::-webkit-progress-value {
+  background: #f5c507;
+}
+.header .video-control__time::-webkit-progress-bar {
+  background: #f5c507;
+}
+.header .video-control__sound {
+  background-color: transparent;
+  border: none;
+}
+.header .video-control__sound i {
+  font-size: 1.5rem;
+  color: #f5c507;
+}
+
+.benefits {
+  background-color: white;
+  padding: 3rem 1rem;
+}
+.benefits__lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.benefits__item {
+  width: 22.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.benefits__item i {
+  display: block;
+  width: 12rem;
+  height: 12rem;
+  background-image: url("../image/THEYALOW-Icons.png");
+  background-repeat: no-repeat;
+}
+.benefits__item .text {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #898988;
+}
+.benefits__item .icon-1 {
+  background-position: 3px -309px;
+}
+.benefits__item .icon-2 {
+  background-position: -350px -300px;
+}
+.benefits__item .icon-3 {
+  background-position: -676px -309px;
+}
+
+.add {
+  position: absolute;
+}
+
+.section {
+  padding: 4rem 0 7rem 0;
+  color: white;
+  background-image: url("../image/THEYALOW-bg-section-.jpg");
+}
+.section__title {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 3.5rem;
+}
+.section__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.section__content-left .video-control__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.7rem;
+  height: 4.7rem;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  line-height: 4.7;
+  background-color: #e1d042;
+}
+.section__content-left .video-control__play i {
+  font-size: 3rem;
+  color: white;
+}
+.section__content-right {
+  position: relative;
+  width: 33rem;
+  min-height: 23rem;
+  background-image: url("../image/THEYALOW-bird.png");
+  background-color: #ec9e03;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section__content-right .count {
+  float: right;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.section__content-right .add {
+  right: 1rem;
+  bottom: 1rem;
+}
+.section__content-right .box {
+  display: none;
+}
+.section__content-desc {
+  position: relative;
+  float: left;
+  width: 34rem;
+  height: 23.2rem;
+  font-size: 2.7rem;
+  font-weight: 300;
+  padding: 2rem 2.5rem;
+  line-height: 1.5;
+  background-color: #ec9e03;
+}
+.section__content-desc .add {
+  font-size: 1rem;
+  top: 90%;
+  left: 95%;
+}
+.section__content-video {
+  position: relative;
+  overflow: hidden;
+}
+.section__content-video video {
+  display: block;
+  width: 31.4rem;
+  height: 23.2rem;
+  object-fit: cover;
+}
+.section__datebox {
+  width: 11.2rem;
+  height: 8.5rem;
+  text-align: center;
+  line-height: 1.2;
+  background-color: #ddb101;
+  font-size: 5rem;
+  font-weight: 700;
+}
+.section__datebox span {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #b56b27;
+  display: block;
+}
+
+.advertise {
+  background-color: #474747;
+  padding-top: 5rem;
+  padding-bottom: 9rem;
+}
+.advertise .container {
+  position: relative;
+  overflow: auto;
+}
+.advertise__title {
+  font-size: 5rem;
+  font-weight: 400;
+  color: #f5c506;
+  max-width: 61.2rem;
+  margin: 0 auto;
+}
+.advertise__advertise {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 11.6rem;
+  height: 11.6rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 11.6;
+  background-color: #f5c506;
+}
+.advertise__device {
+  width: 54rem;
+  height: 25.5rem;
+  margin-top: 7rem;
+  float: left;
+  background-image: url("../image/THEYALOW-bg-footer.png");
+}
+.advertise__lists {
+  width: 40rem;
+  margin-top: 7rem;
+  float: right;
+}
+.advertise__item {
+  margin-bottom: 3rem;
+  position: relative;
+  color: #898988;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.advertise__item::not(:last-child) {
+  margin-bottom: 3rem;
+}
+.advertise__item::before {
+  position: absolute;
+  content: "";
+  left: -3rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: #f5c506;
+}
+
+.footer {
+  background-color: #474747;
+  padding: 1rem 0;
+  box-shadow: 0 -2px 16px 0 #000;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+}
+.footer img {
+  display: block;
+  width: 6.5rem;
+  height: 5.7rem;
+  object-fit: cover;
+}
+.footer p {
+  color: #f5c506;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 640px) {
+  .header__logo {
+    min-width: 18.5rem;
+    background-color: #565656;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .header__logo img {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+  }
+  .header__menu {
+    max-width: 45rem;
+    box-shadow: none;
+  }
+  .header .branch__title {
+    display: none;
+  }
+  .header .branch__control {
+    display: none;
+  }
+  .header .branch .video-element {
+    width: 100%;
+  }
+  .header .video-control {
+    top: 90%;
+    left: 8%;
+  }
+
+  .section {
+    background: none;
+    padding-bottom: 0;
+  }
+  .section__title {
+    display: none;
+  }
+  .section__content {
+    flex-wrap: wrap;
+  }
+  .section__content-right {
+    width: 100%;
+    background-position: 20% 40%;
+  }
+  .section__content-right .count {
+    display: none;
+  }
+  .section__content-right .add {
+    display: none;
+  }
+  .section__content-right .box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .section__content-right .box__item {
+    margin: 1.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 300;
+    display: block;
+    width: 28.5rem;
+    height: 4.5rem;
+    margin-right: 3rem;
+    color: #8f8e8e;
+  }
+  .section__content-right .box__item.message {
+    position: relative;
+    background-image: url("../image/THEYALOW-tw-message1.png");
+    background-repeat: no-repeat;
+  }
+  .section__content-right .box__item.message p {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+  .section__content-right .box__item.message.seen {
+    background-image: url("../image/THEYALOW-tw-message.png");
+  }
+  .section__content-right .box__item.input {
+    letter-spacing: -1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .section__content-right .box__item.input input, .section__content-right .box__item.input button {
+    height: 3rem;
+    border: none;
+  }
+  .section__content-right .box__item.input input {
+    width: 65%;
+    outline: none;
+    border-radius: 8px 0 0 8px;
+  }
+  .section__content-right .box__item.input button {
+    width: 30%;
+    color: white;
+    background-color: #f5c506;
+    border-radius: 0 8px 8px 0;
+    padding: 0;
+  }
+  .section__content-left .video-control__play {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .section__content-desc {
+    width: 50%;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  .section__content-video {
+    margin: 1rem;
+  }
+  .section__datebox {
+    display: none;
+  }
+
+  .advertise__title {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .advertise__lists {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=theyalow.css.map */

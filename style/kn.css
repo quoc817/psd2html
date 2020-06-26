@@ -1,0 +1,243 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.topnav .container {
+  padding: 2.5rem 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.topnav__logo {
+  color: #0ebfdd;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.topnav__menu {
+  width: 50%;
+}
+.topnav__menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.topnav__menu-item {
+  width: 125rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 2rem;
+}
+.topnav__menu-item:hover {
+  background-color: #0ebfdd;
+}
+
+.intro {
+  background-image: url("https://images.unsplash.com/photo-1559562591-6de6f7187f56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  padding-top: 60rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+.intro .container {
+  position: relative;
+  text-align: center;
+}
+.intro .block-text {
+  bottom: 8.5rem;
+}
+.intro__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.block-text {
+  width: 78rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.block-text__title {
+  font-size: 4.4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.block-text__sub-title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.about {
+  background-color: #fff;
+}
+.about .container {
+  padding-top: 25rem;
+  position: relative;
+  text-align: center;
+}
+.about .block-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about .block-text__title {
+  color: #0ebfdd;
+}
+.about .block-text__sub-title {
+  color: #686b6e;
+}
+
+.team {
+  height: 60rem;
+  background-color: #0ebfdd;
+}
+.team .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 6rem 0 6rem;
+  color: white;
+}
+.team__h2 {
+  font-size: 4.4rem;
+  font-weight: 400;
+}
+.team__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 10rem 0;
+}
+.team__btn {
+  display: block;
+  width: 18rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 1.7rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+}
+.team .member {
+  text-align: center;
+  line-height: 2rem;
+}
+.team .member:not(:last-child) {
+  margin-right: 7rem;
+}
+.team .member__image {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+}
+.team .member__name {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.team .member__position {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #686b6e;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+.footer {
+  background-color: #45494d;
+}
+.footer a, .footer i {
+  color: white;
+}
+.footer__contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 2rem;
+}
+.footer__left {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.footer__left a:not(:first-child) {
+  margin-left: 2rem;
+}
+.footer__social-item {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.footer__social-item:not(:first-child) {
+  margin-left: 1rem;
+}
+.footer__bar {
+  border-color: #73767a;
+  margin: 0;
+}
+.footer__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1.5rem 0;
+}
+.footer__link a {
+  color: #73767a;
+  padding: 0 1.4rem;
+  border-right: 1px solid #5a5e62;
+}
+.footer__link a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+/*# sourceMappingURL=kn.css.map */

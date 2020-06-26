@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Food</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/freshfood.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header class="header">
+        <div class="container">
+            <a href="freshfood.html" class="header__logo">
+                <img src="./image/fresh.png" alt="Fresh Food" class="header__img">
+            </a>
+            <nav class="header__navbar">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="./freshfood.html">TRANG CHỦ</a></li>
+                    <li class="header__menu-item"><a href="./freshfood-product.html">THỊT TƯƠI</a></li>
+                    <li class="header__menu-item"><a href="./freshfood-product.html">RAU SẠCH</a></li>
+                    <li class="header__menu-item"><a href="./freshfood-product.html">QUẢ NGỌT</a></li>
+                    <li class="header__menu-item"><a href="./freshfood-news.html">CẨM NANG</a></li>
+                    <li class="header__menu-item"><a href="#">LIÊN HỆ</a></li>
+                    <li class="header__menu-item"><a href="#">THANH TOÁN</a></li>
+                    <li class="header__menu-item"><a href="#"><i class="fas fa-search"></i></a></li>
+                    <li class="header__menu-item header__menu-item--shoppingcart"><a href="#"><i
+                                class="fas fa-shopping-basket"></i></a> <span class="header__cart-number">3</span></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start breadcrums -->
+    <secction class="breadcrums">
+        <div class="container">
+            <div class="breadcrums__list">
+                <a href="#"><i class="fas fa-home"></i> Trang chủ</a> &#8250; <a href="#">Thực Phẩm</a>
+            </div>
+        </div>
+    </secction>
+    <!-- end breadcrums -->
+    
+    <!-- start contetn  -->
+    <section class="content">
+        <div class="container">
+            <div class="content__heading">
+                <h1 class="content__title">Thực phẩm</h1>
+                <div class="content__filter">
+                    <select name="price-fliter" id="js-price-filter" class="selection">
+                        <option value="1" selected>Lọc giá từ thấp đến cao</option>
+                        <option value="2">Lọc giá từ cao đến thấp</option>
+                    </select>
+                    <button class="btn">Lọc</button>
+                </div>
+            </div>
+            <ul class="content__list">
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product1.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Xà Lách Lâm Đồng </h5>
+                        <p class="product__price">25.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product2.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Sườn Bò Úc  </h5>
+                        <p class="product__price">250.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product3.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Nho Đen Mỹ </h5>
+                        <p class="product__price">100.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product4.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Ngao Trắng</h5>
+                        <p class="product__price">75.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product1.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Xà Lách Lâm Đồng </h5>
+                        <p class="product__price">25.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product2.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Sườn Bò Úc  </h5>
+                        <p class="product__price">250.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product3.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Nho Đen Mỹ </h5>
+                        <p class="product__price">100.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product4.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Ngao Trắng</h5>
+                        <p class="product__price">75.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product1.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Xà Lách Lâm Đồng </h5>
+                        <p class="product__price">25.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product2.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Sườn Bò Úc  </h5>
+                        <p class="product__price">250.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product3.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Nho Đen Mỹ </h5>
+                        <p class="product__price">100.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+                <li class="product__item product__item--bodered">
+                    <img class="product__image" src="./image/freshfood-product4.jpg" alt="271x313 px">
+                    <div class="product__details">
+                        <h5 class="product__name">Ngao Trắng</h5>
+                        <p class="product__price">75.000 VNĐ</p>
+                        <a href="#" class="product__add">Thêm vào giỏ hàng</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- end content -->
+
+    <!-- start pagination -->
+    <section class="pagination">
+        <div class="container">
+            <div class="pagination__list">
+                <a href="#" class="pagination__item">1</a>
+                <a href="#" class="pagination__item">2</a>
+                <a href="#" class="pagination__item">3</a>
+            </div>
+        </div>
+    </section>
+    <!-- end pagination -->
+
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__list-branch">
+                <li class="footer__item">
+                    <h3 class="footer__title">Trụ sở chính:</h3>
+                    <p class="footer__address">Số 6A8A, Thanh Xuân Bắc, Phường Thanh Xuân Bắc, Quận Thanh Xuân, Thành
+                        phố Hà Nội. </p>
+                    <p class="footer__phone">Điện thoại: 04.3311.3998</p>
+                    <p class="footer__fax">Fax: 04.3311.3996</p>
+                </li>
+                <li class="footer__item">
+                    <h3 class="footer__title">Chi Nhánh Hồ Chí Minh:</h3>
+                    <p class="footer__address">Số 6A8A, Thanh Xuân Bắc, Phường Thanh Xuân Bắc, Quận Thanh Xuân, Thành
+                        phố Hà Nội. </p>
+                    <p class="footer__phone">Điện thoại: 04.3311.3998</p>
+                    <p class="footer__fax">Fax: 04.3311.3996</p>
+                </li>
+                <li class="footer__item">
+                    <h3 class="footer__title">Chi Nhánh Đà Nẵng:</h3>
+                    <p class="footer__address">Số 6A8A, Thanh Xuân Bắc, Phường Thanh Xuân Bắc, Quận Thanh Xuân, Thành
+                        phố Hà Nội. </p>
+                    <p class="footer__phone">Điện thoại: 04.3311.3998</p>
+                    <p class="footer__fax">Fax: 04.3311.3996</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright">Copyright © 2016 - All rights reserved</div>
+
+    <!-- end foodter -->
+    <script src="./js/freshfood/app.js"></script>
+</body>
+
+</html>

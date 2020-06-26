@@ -1,0 +1,566 @@
+// Default
+html { 
+    font-size: 62.5%;
+}
+body { 
+    font-family: 'PT Sans', sans-serif;
+}
+*,
+*::before,
+*::after { 
+    box-sizing: border-box;
+}
+.container { 
+    max-width: 102rem;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+//sass Define 
+// /////////////////////////////////////// 
+
+// Variable
+$text-primary-color :  #f5c506;
+$highlight  : #ff4359;
+$text-gray : #898988;
+
+// Mixin 
+@mixin flex ($align : stretch , $justify: center, $wrap : nowrap, $dir: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    flex-direction: $dir;
+}
+@mixin font ($size : 1.9rem, $weight: 300 ) {
+    font-size: $size;
+    font-weight: $weight;
+}
+// /////////////////////////////////////////
+
+// header 
+.header { 
+    background-image: url('../image/THEYALOW-bg-header.jpg');
+    padding-bottom: 7rem;
+    &__topnav { 
+        @include flex(flex-end, space-between);
+    }
+    &__logo {
+        @include flex(center, center);
+        @include font(4rem, 400);
+        font-style: italic;
+        color: white;
+    }
+    &__menu { 
+        width: 45.5rem;
+        height: 6rem;
+        background-color: $text-primary-color;
+        @include font(2rem, 400);
+        padding: 1rem 0;
+        color : $text-gray;
+        &-lists { 
+            @include flex(center, space-around);
+        }
+        &-item {
+            position: relative;
+            span {
+                display: inline-block;
+                width: 3.2rem;
+                height: 3.2rem;
+                background-image: url('../image/THEYALOW-Icons.png');
+                background-repeat: no-repeat;
+                &.about { 
+                    background-position: -3px -103px;
+                }
+                &.service{ 
+                    background-position: -150px -103px;
+                }
+                &.contact { 
+                    background-position: -290px -103px;
+                }
+            }
+            a {
+                color: $text-gray;
+                display: inline-block;
+                vertical-align: 20%;
+            }
+            &:not(:last-child) {
+                ::after{ 
+                    content: '';
+                    width: 2px;
+                    height: 100%;
+                    position: absolute;
+                    background-color: $text-gray;
+                    right: -2rem;
+                }
+            }
+        }
+        &--shadow { 
+            box-shadow: -5px -5px 0 0 #9d8218, -9px -9px 0 0 #807122
+        }
+    }
+    .branch { 
+        margin-top: 5rem;
+        padding: 0 1rem;
+        @include flex(center, space-between);
+        &__boxvideo {
+           overflow: hidden;
+        }
+        position: relative;
+        .video-element { 
+            display: block;
+            width: 55rem;
+            height: 32.7rem;
+          
+        }
+        &__title {
+            @include font(6rem, 400 );
+            text-align: center;
+            color : white;
+            &--highlight {
+                color: $text-primary-color;
+                display: block;
+            }
+        }
+        &__control {
+            text-align: center;
+           i {
+            display: block;
+            position: absolute;
+            width: 3.5rem;
+            height: 6rem;
+            background-color: $text-primary-color;
+            color: white;
+            font-size: 2rem;
+           }
+           &-left { 
+                line-height: 3;
+               top: 25rem;
+               left: 0 ;
+           }
+           &-right { 
+            line-height: 3;
+            top: 25rem;
+            right: 0 ;
+        }
+            
+        }
+    }
+    .video-control {
+        position: absolute; 
+        top: 29rem;
+        left: 2rem;
+        i {
+            color: white;
+            
+        }
+        &__play { 
+            position: absolute;
+            top :-15rem;
+            left: 23rem; 
+            width: 6.7rem;
+            height: 6.7rem;
+            border-radius: 50%;
+            border: none;
+            text-align: center;
+            line-height: 6;
+            background-color: #e1d042;
+            i { 
+            font-size: 3rem;
+            }
+        }
+        &__play-pause {
+            width: 2.7rem;
+            height: 2.7rem;
+            background-color: #e1d042;
+            border: none;
+            text-align: center;
+            line-height: 2;
+            i { 
+                font-size: 1.5rem;
+            }
+        }
+        &__time {
+            width: 40rem;
+            height: 1.5rem;
+            background-color: #5e510d;
+            border-radius: .5rem;
+            border: none;
+            color : #f5c507;
+            margin : 0 2rem;
+            &::-webkit-progress-value {
+                background:  #f5c507;
+              }
+            
+            &::-moz-progress-bar {
+            background:  #f5c507;
+            }
+            
+            &::-webkit-progress-value {
+            background:  #f5c507;
+            }
+            
+            &::-webkit-progress-bar {
+            background:  #f5c507;
+            }
+        }
+        &__sound {
+            background-color: transparent;
+            border: none;
+            i { 
+                font-size: 1.5rem;
+                color : #f5c507;
+            }
+        }
+
+    }
+}
+.benefits { 
+    background-color: white;
+    padding: 3rem 1rem;
+    &__lists { 
+        @include flex(center,space-around);
+    }
+    &__item { 
+        width: 22.4rem;
+        @include flex(center,center,nowrap, column);
+        i {
+            display: block;
+            width: 12rem;
+            height: 12rem;
+            background-image: url('../image/THEYALOW-Icons.png');
+            background-repeat: no-repeat;
+        }
+        .text { 
+            @include font(3rem, 400);
+            color: $text-gray;
+        }
+        .icon-1 { 
+            background-position: 3px -309px;
+        }
+        .icon-2 { 
+            background-position: -350px -300px;
+        }
+        .icon-3 { 
+            background-position: -676px -309px;
+        }      
+    }
+  
+}
+.add {
+    position: absolute;
+}
+.section { 
+    padding: 4rem 0 7rem 0;
+    color : white;
+    background-image: url('../image/THEYALOW-bg-section-.jpg');
+    &__title { 
+        @include font(4rem, 400 );
+        margin-bottom: 3.5rem;
+    }
+    &__content  {
+        @include flex(center,space-between);
+        &-left {
+           
+            .video-control { 
+                &__play {
+                    position: absolute;
+                    top : 50%;
+                    left: 50%; 
+                    transform: translate(-50%,-50%);
+                    width: 4.7rem;
+                    height: 4.7rem;
+                    border-radius: 50%;
+                    border: none;
+                    text-align: center;
+                    line-height: 4.7;
+                    background-color: #e1d042;
+                    i { 
+                        font-size: 3rem;
+                        color: white;
+                    }
+                }
+            };
+        }
+        &-right {
+            position: relative;
+            width: 33rem;
+            min-height: 23rem;
+            background-image: url('../image/THEYALOW-bird.png');
+            background-color: #ec9e03;
+            background-repeat: no-repeat;
+            background-position: center;
+            .count { 
+                float: right;
+                padding-top: 2rem;
+                padding-right: 2rem;
+                @include font(4rem,400 );
+            }
+            .add {
+                right: 1rem;
+                bottom: 1rem;
+            }
+            .box {
+                display: none;
+            }
+        }
+        &-desc {
+            position: relative;
+            float: left;
+            width: 34rem;
+            height: 23.2rem;
+            @include font(2.7rem,300 );
+            padding: 2rem 2.5rem;
+            line-height: 1.5;
+            background-color: #ec9e03;
+            .add {
+                font-size: 1rem;
+                top: 90%;
+                left: 95%;
+            }
+        }
+        &-video { 
+            position: relative;
+            overflow: hidden;
+            video { 
+                display: block;
+                width: 31.4rem;
+                height: 23.2rem;
+                object-fit: cover;
+            }
+        }
+    }
+    &__datebox {
+        width: 11.2rem;
+        height: 8.5rem;
+        text-align: center;
+        line-height: 1.2;
+        background-color: #ddb101;
+        @include font(5rem, 700);
+        span {
+            @include font(2rem, 400);
+            color: #b56b27;
+            display: block;
+        }
+    }
+}
+.advertise { 
+    background-color: #474747;
+    padding-top: 5rem;
+    padding-bottom: 9rem;
+    .container { 
+        position: relative;
+        overflow: auto;
+    }
+    &__title { 
+        @include font(5rem, 400 );
+        color: $text-primary-color;
+        max-width: 61.2rem ;
+        margin: 0 auto;
+    }
+    &__advertise {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 11.6rem;
+        height: 11.6rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 11.6;
+        background-color: $text-primary-color;
+    }
+    &__device {
+        width: 54rem;
+        height: 25.5rem;
+        margin-top: 7rem;
+        float: left;
+        background-image: url('../image/THEYALOW-bg-footer.png');
+    }
+    &__lists { 
+       width: 40rem;
+       margin-top: 7rem;
+       float: right;
+    }
+    &__item {
+        &::not(:last-child) {
+            margin-bottom: 3rem;
+        }
+        margin-bottom: 3rem;
+        position: relative;
+        color: $text-gray;
+        @include font (2rem, 400);
+        &::before { 
+            position: absolute;
+            content: '';
+            left : -3rem;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            background-color: $text-primary-color;
+         
+        }
+    }
+}
+.footer { 
+    background-color: #474747;
+    padding: 1rem 0;
+    box-shadow: 0 -2px 16px 0 #000;
+    .container { 
+        @include flex(center, space-between);  
+    }
+    &__logo {
+        @include flex(center, center);
+        @include font(2rem, 400);
+        font-style: italic;
+        color: white;
+    }
+    img { 
+        display: block;
+        width: 6.5rem;
+        height: 5.7rem;
+        object-fit: cover;
+    }
+    p {
+        color: $text-primary-color;
+        @include font (1.5rem, 300);
+    }
+}
+
+// RESPONSIVE {
+ @import 'responsive.scss';
+
+ @include responsive_640 () { 
+    .header { 
+
+        &__logo { 
+            min-width: 18.5rem;
+            background-color: #565656;
+            @include font(2rem, 400);
+            img { 
+                display: block;
+                width: 6rem;
+                height: 6rem;
+                object-fit: cover;
+            }
+        }
+        &__menu { 
+            max-width: 45rem;
+            box-shadow: none;
+        }
+        .branch {
+            &__title {
+                display: none;
+            }
+            &__control {
+                display: none;
+            }
+            .video-element { 
+                width: 100%;
+            }
+        }
+        .video-control { 
+            top : 90%;
+            left: 8%;
+        }
+    }
+    .section { 
+        background: none;
+        padding-bottom: 0;
+        &__title {
+            display: none;
+        }
+        &__content { 
+            flex-wrap: wrap;
+            &-right {
+                width: 100%;
+                background-position: 20% 40%;
+                .count { 
+                    display: none;
+                }
+                .add {
+                    display: none;
+                }
+                .box {
+                   @include flex(flex-end,space-around, nowrap, column);
+                  
+                   &__item {
+                        margin: 1.5rem 0;
+                        @include font(1.3rem,300 );
+                        display: block;
+                        width: 28.5rem;
+                        height: 4.5rem;
+                        margin-right: 3rem;
+                        color : #8f8e8e;
+                       &.message {
+                           position: relative;
+                           background-image: url('../image/THEYALOW-tw-message1.png');
+                           background-repeat: no-repeat;
+                           p {
+                               position: absolute;
+                               top : 50%;
+                               left: 10%;
+                                transform: translateY(-50%);
+                           }
+                           &.seen{
+                            background-image: url('../image/THEYALOW-tw-message.png');
+                           }
+                       }
+                       &.input {
+                           letter-spacing: -1rem;
+                           text-align: center;
+                           @include flex(center, flex-end);
+                           input , button {
+                               height: 3rem;
+                            //    display: block;
+                                border: none;
+                           }
+                           input { 
+                               width: 65%;
+                                outline: none;
+                                border-radius: 8px 0 0 8px;
+        
+                           }
+                           button {
+                               width: 30%;
+                                color: white;
+                                background-color: $text-primary-color;
+                                border-radius: 0 8px 8px 0;
+                                padding : 0;
+                           }
+                       }
+                       
+                   }
+                }
+            }
+            &-left {
+                .video-control__play {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &-desc { 
+                width: 50%;
+                margin: 1rem;
+                font-size: 2rem;
+            }
+            &-video { 
+                margin: 1rem;
+            }
+        }
+        &__datebox {
+            display: none;
+        }
+    }
+    .advertise {
+        &__title {
+            font-size: 4rem;
+            text-align: center;
+        }
+        &__lists{
+            display: none;
+        }
+    }
+    
+ }

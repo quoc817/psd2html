@@ -1,0 +1,228 @@
+// default
+html {
+    // setup for 1rem = 10px;
+    font-size: 62.5%;
+}
+body { 
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem ;
+    font-weight: 400;
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+//sass Define 
+// /////////////////////////////////////// 
+
+// Variable
+$highlight  : #ae2f2f;
+$primary-color: #0ebfdd;
+// Mixin 
+@mixin flex ($align : stretch , $justify: flex-start, $wrap : nowrap, $dir: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    flex-direction: $dir;
+}
+@mixin font ($size : 1.9rem, $weight: 300 ) {
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin size ($width, $height: $width){
+    width: $width;
+    height: $height;
+}
+@mixin vcentered ($lineheight, $textalign: center ) {
+    line-height: $lineheight;
+    text-align: center;
+}
+// =========================================================
+
+.container {
+    max-width: 96rem;
+    margin: 0 auto;
+}
+
+.topnav {
+    .container {
+        padding: 2.5rem 1rem 3rem;
+        @include flex(center, space-between);
+    }
+    &__logo {
+        color: $primary-color;
+        @include font(3rem, 700 );
+    }
+    &__menu {
+        width: 50%;
+    }
+    &__menu-list {
+        @include flex(center,space-between);
+    }
+    &__menu-item { 
+        @include size(125rem, 4rem);
+        @include vcentered(4rem);
+        border-radius: 2rem;
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+
+}
+.intro {
+    background-image: url('https://images.unsplash.com/photo-1559562591-6de6f7187f56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    padding-top : 60rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+    .container {
+        position: relative;
+        text-align: center;
+    }
+    .block-text {
+        bottom: 8.5rem;
+    }
+    &__overlay {
+        position: absolute;
+        @include size(100%);
+        background-color: rgba($color: #000000, $alpha: .3);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+}
+.block-text {
+    width: 78rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    &__title {
+        @include font(4.4rem, 700 );
+        margin-bottom: 3rem; 
+    }
+    &__sub-title { 
+        @include font(2rem, 400 ); 
+    } 
+}
+.about {
+    background-color: #fff;
+    .container {
+        padding-top: 25rem;
+        position: relative;
+        text-align: center;
+    }
+    .block-text {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        &__title {
+           color: $primary-color;
+        }
+        &__sub-title {
+           color: #686b6e;
+        }
+    }
+}
+.team {
+    height: 60rem;
+    background-color: $primary-color;
+    .container {
+        @include flex(center, center , nowrap , column );
+        padding: 6rem 0 6rem;
+        color: white;
+    }
+    &__h2 {
+        @include font(4.4rem, 400 ); 
+      
+    }
+    &__list {
+        @include flex(center, center);
+        margin: 10rem 0;
+    }
+    &__btn {
+        display: block;
+        @include size(18rem, 4rem );
+        @include vcentered(4rem);
+        border: 1px solid #fff;
+        border-radius: 1.7rem;
+        @include font(1.4rem, 500 ); 
+        color: white;
+    }
+    .member {
+        text-align: center;
+        line-height: 2rem;
+        &:not(:last-child) {
+            margin-right: 7rem;
+        }
+        &__image {
+            @include size(15rem );
+            border-radius: 50%;
+        }
+        &__name {
+            @include font(1.8rem, 300 ); 
+        }
+        &__position {
+            @include font(1.6rem, 300 );
+            color: #686b6e;
+        }
+    }
+}
+.map {
+    iframe {
+        width: 100%;
+    }
+}
+.footer {
+    background-color: #45494d;
+    a, i {
+        color: white;
+    }
+    &__contact {
+        @include flex(center, space-between);
+        padding: 2rem;
+    }
+    &__left {
+        @include font(1.2rem, 500 ); 
+        a:not(:first-child) {
+            margin-left: 2rem;
+        }
+    }
+    &__social-item {
+        display: inline-block;
+        @include size(4rem);
+        @include vcentered(4rem);
+        border-radius: 50%;
+        border: 1px solid white;
+        &:not(:first-child) {
+            margin-left: 1rem;
+        }
+    }
+    &__bar {
+        border-color: #73767a;
+        margin: 0;
+    }
+    &__link {
+        @include flex(center, flex-end);
+        @include font(1.2rem, 500 ); 
+        padding: 1.5rem 0;
+        a {
+            color: #73767a;
+            padding:0 1.4rem;
+            &:not(:first-child) {
+                margin-left: 1rem;
+            }
+            border-right: 1px solid #5a5e62;
+        }
+    }
+}

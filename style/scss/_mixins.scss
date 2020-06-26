@@ -1,0 +1,25 @@
+// Set Display flex for el
+// usage
+// scss - @include flex(center, center, column, nowrap)
+//      or @include flex (center, center)
+@mixin flex ($align : flex-start, $justify: center, $dir: row, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+}
+@mixin size($width: 100%, $height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin font ($size, $weight: normal) {
+    font-size: $size;
+    font-weight: $weight;
+}
+//  align children center of parent, when defined height/ min-height 
+@mixin v-align ($lineheight) {
+    text-align: center;
+    line-height: $lineheight;
+}
+

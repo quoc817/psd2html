@@ -1,0 +1,714 @@
+@font-face {
+  font-family: ExistenceL;
+  src: url("/fonts/existence-cufonfonts/Existence-Light.woff") format("woff");
+}
+@font-face {
+  font-family: HelveticaNeu;
+  src: url("/fonts/Helvetical/HelveticaNeueLTStd45Light_22520.ttf") format("ttf");
+}
+@font-face {
+  font-family: LatoHairline;
+  src: url("/fonts/lato-hairline-cufonfonts/Lato-Hairline.woff") format("woff");
+}
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 117rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.bg-gray {
+  background-color: #eeeeee;
+}
+
+.bg-decor {
+  background-image: url("../image/Bhaga/sectionbg.jpg");
+}
+
+.header__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.header__bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.header .container {
+  position: relative;
+  z-index: 2;
+  padding-top: 11rem;
+}
+
+.jumbotron {
+  color: white;
+  text-align: center;
+}
+.jumbotron__title {
+  margin-bottom: 7.5rem;
+  font-family: ExistenceL;
+  font-size: 5rem;
+  font-weight: normal;
+}
+.jumbotron__title--h {
+  color: #9f449b;
+}
+.jumbotron__subtitle {
+  margin-bottom: 3rem;
+  font-family: LatoHairline;
+  font-size: 4.8rem;
+  font-weight: normal;
+}
+.jumbotron__text {
+  margin-bottom: 12rem;
+  font-family: LatoHairline;
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+
+.menu {
+  height: 39.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.menu__item:nth-child(3), .menu__item:nth-child(4) {
+  align-self: flex-start;
+}
+
+.b-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 17rem;
+  height: 18.5rem;
+  background-image: url("../image/Bhaga/all-icon.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  margin: 0 auto;
+}
+.b-icon__item {
+  display: block;
+  width: 5.8rem;
+  height: 5.8rem;
+  background-image: url("../image/Bhaga/all-icon.png");
+}
+.b-icon__item--big {
+  width: 8.5rem;
+  height: 6.8rem;
+}
+.b-icon__item--setting {
+  background-position: -198px 0;
+}
+.b-icon__item--user {
+  background-position: -288px 0;
+}
+.b-icon__item--buble {
+  background-position: -380px 0;
+}
+.b-icon__item--photo {
+  background-position: -471px 0;
+}
+.b-icon__item--pen {
+  background-position: -562px 0;
+}
+.b-icon__item--paperplane {
+  background-position: -653px 0;
+}
+.b-icon__item--heart {
+  background-position: -182px -81px;
+}
+.b-icon__item--diamond {
+  background-position: -318px -83px;
+}
+.b-icon__item--cup {
+  background-position: -438px -81px;
+}
+.b-icon__item--phone {
+  background-position: -571px -81px;
+}
+.b-icon__item--study {
+  background-position: -184px -256px;
+}
+.b-icon--hasbg:hover {
+  background-position: 0 -192px;
+}
+.b-icon--small {
+  width: 9rem;
+  height: 9.5rem;
+  background-image: url("../image/Bhaga/outline.png");
+  background-size: cover;
+  margin: 0 auto 8.2rem;
+}
+.b-icon--small i {
+  font-size: 3.2rem;
+  color: white;
+}
+.b-icon--small:hover i {
+  color: #9f449b;
+}
+
+.navigation {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+.navigation .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 5.5rem;
+  margin-bottom: 3rem;
+}
+.navigation .jumbotron__title {
+  margin-bottom: 0;
+}
+.navigation__menulist {
+  width: 66.7rem;
+}
+.navigation__menulist ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.navigation__link {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.navigation__link:hover {
+  color: #9f449b;
+}
+
+.feature {
+  padding-top: 18rem;
+  padding-bottom: 21rem;
+}
+.feature .b-icon:hover {
+  background-image: url("../image/Bhaga/all-icon.png");
+  background-position: 0 -382px;
+}
+.feature .b-icon:hover .b-icon__item--heart {
+  background-position: -182px -163px;
+}
+.feature .b-icon:hover .b-icon__item--diamond {
+  background-position: -318px -163px;
+}
+.feature .b-icon:hover .b-icon__item--cup {
+  background-position: -438px -161px;
+}
+.feature .b-icon:hover .b-icon__item--phone {
+  background-position: -571px -161px;
+}
+
+.headblock {
+  text-align: center;
+  position: relative;
+  margin-bottom: 17.5rem;
+}
+.headblock__h3 {
+  font-family: ExistenceL;
+  font-size: 4.8rem;
+}
+.headblock__h {
+  color: #9f449b;
+}
+.headblock::before {
+  content: "";
+  position: absolute;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-left: 1px solid #9f449b;
+  border-bottom: 1px solid #9f449b;
+  box-shadow: inset 0px -1px 0 0 #ecdaeb, -1px 0px 0 0 #ecdaeb;
+  left: 40rem;
+  bottom: -3rem;
+}
+.headblock::after {
+  content: "";
+  position: absolute;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-right: 1px solid #9f449b;
+  border-top: 1px solid #9f449b;
+  box-shadow: inset 0px 1px 0 0 #ecdaeb, 1px 0px 0 0 #ecdaeb;
+  top: -3rem;
+  right: 40rem;
+}
+
+.b-feature ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.b-feature__item {
+  width: calc(25% - 2.25rem);
+  text-align: center;
+}
+.b-feature__name {
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin: 4rem 0;
+}
+.b-feature__name--big {
+  font-size: 4.8rem;
+  font-weight: normal;
+  margin: 6rem 0;
+}
+.b-feature__desc {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.about .container {
+  padding-top: 15.5rem;
+  padding-bottom: 23rem;
+}
+.about__content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.about__desc {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 45.7rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.about__btn {
+  margin-top: auto;
+}
+
+.btn {
+  display: block;
+  width: 23rem;
+  height: 7.5rem;
+  background-color: #9f449b;
+  text-align: center;
+  line-height: 7.5rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color: white;
+}
+.btn--rounded {
+  border-radius: 3px;
+}
+.btn--border {
+  border: 1px solid #000;
+}
+
+.quote .container {
+  padding: 15rem 0 11.9rem;
+  color: white;
+}
+.quote .b-feature ul {
+  justify-content: center;
+}
+.quote .b-feature__item {
+  width: 100%;
+  height: 100%;
+}
+.quote .b-icon__item {
+  width: 8.5rem;
+  height: 6.8rem;
+}
+.quote .b-icon:hover {
+  background-image: url("../image/Bhaga/all-icon.png");
+  background-position: 0 -382px;
+}
+.quote .b-icon:hover .b-icon__item--study {
+  background-position: -307px -256px;
+}
+
+.ourteam .container {
+  padding-top: 15.5rem;
+  padding-bottom: 23rem;
+}
+.ourteam__view-control {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: normal;
+}
+.ourteam__view-control a {
+  margin: 2rem;
+}
+.ourteam__list {
+  margin-top: 16rem;
+}
+
+.members {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.members__profie {
+  text-align: center;
+}
+.members__avatar {
+  width: 25.2rem;
+  height: 25.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #676767;
+}
+.members__name {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 8rem 0 2rem;
+}
+.members__position {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #838383;
+  margin-bottom: 3rem;
+}
+
+.social__item {
+  display: inline-block;
+}
+.social__item:not(:last-child) {
+  margin-right: 2.5rem;
+}
+.social__icon {
+  display: inline-block;
+  width: 4.5rem;
+  height: 4.5rem;
+  text-align: center;
+  line-height: 4.5rem;
+  border-radius: 50%;
+  border: 1px solid #676767;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.4rem;
+}
+
+.ourskill .container {
+  padding: 0 0 15rem;
+}
+.ourskill__list {
+  padding: 0 9.8rem;
+}
+.ourskill__list ul {
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.ourskill__item {
+  margin-bottom: 5rem;
+  font-family: HelveticaNeu;
+  overflow: auto;
+}
+.ourskill__name {
+  display: inline-block;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 2.2rem;
+}
+.ourskill__inprogress {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #676767;
+  float: right;
+}
+
+.progress {
+  width: 42rem;
+  height: 2rem;
+  background-color: #838383;
+}
+.progress__bar {
+  background-color: #9f449b;
+  width: 70%;
+  height: 100%;
+}
+
+.service .container {
+  padding: 15rem 0 11.9rem;
+  color: white;
+}
+.service .b-feature ul {
+  justify-content: center;
+}
+.service .b-feature__item {
+  width: 100%;
+  height: 100%;
+}
+.service .b-feature__name {
+  font-size: 4.8rem;
+  font-weight: 300;
+  margin: 4rem 0;
+}
+.service .b-icon__item {
+  width: 8.5rem;
+  height: 6.8rem;
+}
+.service .b-icon__item--buble {
+  background-position: -365px 5px;
+}
+.service .b-icon:hover {
+  background-image: url("../image/Bhaga/all-icon.png");
+  background-position: 0 -382px;
+}
+.service .b-icon:hover .b-icon__item--buble {
+  background-position: -365px -338px;
+}
+
+.statistic .container {
+  padding: 17rem 8.2rem 8.5rem 9.8rem;
+  font-family: HelveticaNeu;
+  color: #676767;
+}
+.statistic__list ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.statistic__item {
+  text-align: center;
+}
+.statistic__item h3 {
+  font-size: 6.4rem;
+  font-weight: 300;
+  color: #000;
+}
+.statistic__item p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.testimonials .container {
+  padding: 6rem 0 10rem;
+  font-family: HelveticaNeu;
+  text-align: center;
+}
+.testimonials__image {
+  width: 17.5rem;
+  height: 17.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5rem;
+}
+.testimonials__content {
+  max-width: 94.5rem;
+  font-size: 3.3rem;
+  font-weight: 300;
+  color: #5b5b5b;
+  margin: 0 auto 4rem;
+}
+.testimonials__origin {
+  font-size: 3.3rem;
+  font-weight: 600;
+  color: #777777;
+  margin-bottom: 5.5rem;
+}
+.testimonials__bottom {
+  width: 128rem;
+  height: 8rem;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.slider-control__item {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+}
+.slider-control__item:not(:first-child) {
+  margin-left: 0.8rem;
+}
+.slider-control__item--active {
+  background-color: #777777;
+}
+.slider-control__item--active i {
+  visibility: hidden;
+}
+
+.portfolio .container {
+  padding-bottom: 22rem;
+  font-family: HelveticaNeu;
+}
+.portfolio__filter {
+  margin-bottom: 7rem;
+  text-align: center;
+}
+.portfolio__btn {
+  display: inline-block;
+  width: 8.4rem;
+  height: 4rem;
+  background-color: #9f449b;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: black;
+  background-color: #fff;
+}
+.portfolio__btn:not(:first-child) {
+  margin-left: 2.2rem;
+}
+.portfolio__btn:hover {
+  background-color: #9f449b;
+  color: white;
+  border-color: #9f449b;
+}
+.portfolio__more {
+  margin: 2.3rem auto 0;
+}
+
+.products {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.products__item {
+  width: calc(33.33% - 1.5rem);
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.products__image {
+  width: 36rem;
+  height: 36rem;
+  object-fit: cover;
+}
+.products__name {
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin: 2.5rem 0 1.5rem;
+}
+.products__tags {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #838383;
+}
+
+.contact .container {
+  font-family: HelveticaNeu;
+}
+.contact__content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.contact__form {
+  font-size: 2.3rem;
+  font-weight: 300;
+  width: calc(50% - 1.5rem);
+}
+.contact__form input {
+  width: 53rem;
+  height: 7.3rem;
+  border: 1px solid #676767;
+  padding: 2.5rem 3rem;
+  outline: none;
+}
+.contact__form input::placeholder {
+  color: #838383;
+}
+.contact__form textarea {
+  max-width: 100%;
+  width: 53rem;
+  height: 28.3rem;
+  border: 1px solid #676767;
+  padding: 2.5rem 3rem;
+  outline: none;
+}
+.contact__form textarea::placeholder {
+  color: #838383;
+}
+.contact__form-item:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+.contact__info {
+  width: calc(50% - 1.5rem);
+}
+.contact__p {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.contact__addr {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 6.5rem 0 5rem;
+}
+.contact__phone {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #000;
+}
+.contact__phone:first-child {
+  margin-bottom: 1rem;
+}
+.contact .social {
+  padding-top: 7rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 17rem 11rem;
+}
+
+/*# sourceMappingURL=bhaga.css.map */
